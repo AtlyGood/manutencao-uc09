@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bug de Tag</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .titulo {
+            font-size: 24px;
+            color: blue;
+            background-color: yellow;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="titulo">Página com Bug de Estrutura</h1>
+
+    <p>Este é o primeiro parágrafo. </p>
+    <div id="status">Verificando JS...</div>
+    <script src="script.js"></script>
+    <script>
+        let valor = 10;
+        let elemento = document.getElementById("status");
+        if (valor == 10) {
+            elemento.innerText = "A condição é sempre verdadeira! (Bug de Lógica)";
+        } 
+        else {
+            elemento.innerText = "A condição é falsa.";
+        }
+    </script>
+</body>
+
+
+</html>
